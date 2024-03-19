@@ -4,14 +4,28 @@ void alpha_mirror(char *str)
 {
     int i;
     int position;
+    int distance;
 
     i = 0;
-    while (/str)
+    while (*str)
     {
-        position = (str[i] % 65);
-        str[i] = position;
-        write(1, &str[i], 1);
-        i++;
+        if (*str >= 65 && *str <= 90)
+        {
+            position = 90 - *str;
+            distance = 25 - position;
+            *str = *str + position - distance;
+            write(1, str, 1);
+        }
+        else if (*str >= 97 && *str <= 122)
+        {
+            position = 122 - *str;
+            distance = 25 - position;
+            *str = *str + position - distance;
+            write(1, str, 1);
+        }
+        else
+            write(1, str, 1);
+        str++;
     }
 }
 
