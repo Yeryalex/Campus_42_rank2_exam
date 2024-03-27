@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 int ft_strlen(char *str)
 {
@@ -28,14 +26,4 @@ char *ft_strdup(char *src)
     }
     copy[i] = '\0';
     return (copy);
-}
-
-int main()
-{
-    char *ptr = "";
-    char *newStr = ft_strdup(ptr);
-    // char *new = strdup(ptr);
-    printf("%s\n", newStr);
-    // printf("%s", new);
-    return (0);
 }
